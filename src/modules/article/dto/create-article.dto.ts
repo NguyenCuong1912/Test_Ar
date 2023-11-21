@@ -1,11 +1,12 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { IsEnum, IsString } from 'class-validator';
+import { IsEnum, IsNotEmpty, IsString } from 'class-validator';
 import { Topic } from '../entities/article.entity';
 export class CreateArticleDto {
   @ApiProperty({
     description: 'title of article',
     example: 'Title Article',
   })
+  @IsNotEmpty()
   @IsString()
   title: string;
 
@@ -21,6 +22,7 @@ export class CreateArticleDto {
     example: '',
   })
   @IsString()
+  @IsNotEmpty()
   article_background: string;
 
   @ApiProperty({
@@ -28,12 +30,14 @@ export class CreateArticleDto {
     example: Topic.CHARITY,
   })
   @IsEnum(Topic)
+  @IsNotEmpty()
   topic: string;
 
   @ApiProperty({
     description: 'content of article',
     example: '',
   })
+  @IsNotEmpty()
   @IsString()
   content: string;
 }
