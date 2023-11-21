@@ -15,6 +15,7 @@ import { Account, AccountSchema } from './entities/account.entity';
 import mongoose from 'mongoose';
 import { EmailExistsMiddleware } from 'src/middlewares/checkEmail';
 import routes from 'src/routes/index.route';
+import { AuthModule } from '../auth/auth.module';
 
 @Module({
   imports: [
@@ -30,6 +31,7 @@ import routes from 'src/routes/index.route';
         },
       },
     ]),
+    AuthModule,
   ],
   controllers: [AccountController],
   providers: [AccountService],

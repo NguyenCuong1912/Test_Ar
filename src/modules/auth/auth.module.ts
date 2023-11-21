@@ -32,6 +32,7 @@ import routes from 'src/routes/index.route';
     JwtAccessTokenStrategy,
     JwtRefreshTokenStrategy,
   ],
+  exports: [AuthService],
 })
 export class AuthModule implements NestModule {
   configure(consumer: MiddlewareConsumer) {

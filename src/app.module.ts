@@ -6,6 +6,7 @@ import { ServeStaticModule } from '@nestjs/serve-static/dist/serve-static.module
 import { join } from 'path';
 import { AuthModule } from './modules/auth/auth.module';
 import { AccountModule } from './modules/account/account.module';
+import { UploadModule } from './modules/upload/upload.module';
 
 @Module({
   imports: [
@@ -26,7 +27,8 @@ import { AccountModule } from './modules/account/account.module';
       rootPath: join(__dirname, '..'),
     }),
     AuthModule,
-    // AccountModule,
+    UploadModule,
+    AccountModule,
   ],
   controllers: [],
   providers: [],
