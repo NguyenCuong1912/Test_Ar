@@ -7,6 +7,7 @@ import { join } from 'path';
 import { AuthModule } from './modules/auth/auth.module';
 import { AccountModule } from './modules/account/account.module';
 import { UploadModule } from './modules/upload/upload.module';
+import { ArticleModule } from './modules/article/article.module';
 
 @Module({
   imports: [
@@ -29,6 +30,7 @@ import { UploadModule } from './modules/upload/upload.module';
     AuthModule,
     UploadModule,
     AccountModule,
+    ArticleModule,
   ],
   controllers: [],
   providers: [],

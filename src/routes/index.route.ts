@@ -12,6 +12,8 @@ const routes = {
   verify: 'verify',
   confirmVerify: 'confirmVerify',
   refreshtoken: 'refreshtoken',
+  //! article
+  article: 'article',
 };
 
 export default routes;
