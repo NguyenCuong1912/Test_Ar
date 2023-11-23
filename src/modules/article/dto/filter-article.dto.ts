@@ -16,7 +16,7 @@ export class FilterArticletDto extends PaginationDto {
 
   @ApiPropertyOptional({
     enum: Topic,
-    default: Topic.CHARITY,
+    // default: Topic.CHARITY,
   })
   @IsOptional()
   @IsEnum(Topic)
